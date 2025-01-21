@@ -20,8 +20,15 @@ resource "aws_iam_role" "eks_cluster_role" {
     ]
   })
   tags = {
-    yor_name  = "eks_cluster_role"
-    yor_trace = "9df0f6a7-0485-4166-9d3b-27df376f6d53"
+    yor_name             = "eks_cluster_role"
+    yor_trace            = "9df0f6a7-0485-4166-9d3b-27df376f6d53"
+    git_commit           = "55aee087edbfd7596f59b6e79bb6612a0259965f"
+    git_file             = "eks.tf"
+    git_last_modified_at = "2025-01-21 13:53:06"
+    git_last_modified_by = "matt+github@metahertz.co.uk"
+    git_modifiers        = "matt+github"
+    git_org              = "metahertz"
+    git_repo             = "demo-infra-code"
   }
 }
 
@@ -41,10 +48,17 @@ resource "aws_eks_cluster" "eks_cluster" {
   }
 
   tags = {
-    Environment = "dev"
-    Project     = "eks-demo"
-    yor_name    = "eks_cluster"
-    yor_trace   = "d4b0f560-0692-41df-b947-24e929bf24ba"
+    Environment          = "dev"
+    Project              = "eks-demo"
+    yor_name             = "eks_cluster"
+    yor_trace            = "d4b0f560-0692-41df-b947-24e929bf24ba"
+    git_commit           = "1cbeb0b616af15b96be8d30a1c8a28246c348dd3"
+    git_file             = "eks.tf"
+    git_last_modified_at = "2025-01-21 14:00:28"
+    git_last_modified_by = "matt+github@metahertz.co.uk"
+    git_modifiers        = "matt+github"
+    git_org              = "metahertz"
+    git_repo             = "demo-infra-code"
   }
 }
 
@@ -71,8 +85,15 @@ resource "aws_eks_node_group" "eks_node_group" {
     aws_iam_role_policy_attachment.eks_node_policy
   ]
   tags = {
-    yor_name  = "eks_node_group"
-    yor_trace = "3d703e8b-089f-46ed-accb-c0dd02d5a94d"
+    yor_name             = "eks_node_group"
+    yor_trace            = "3d703e8b-089f-46ed-accb-c0dd02d5a94d"
+    git_commit           = "55aee087edbfd7596f59b6e79bb6612a0259965f"
+    git_file             = "eks.tf"
+    git_last_modified_at = "2025-01-21 13:53:06"
+    git_last_modified_by = "matt+github@metahertz.co.uk"
+    git_modifiers        = "matt+github"
+    git_org              = "metahertz"
+    git_repo             = "demo-infra-code"
   }
 }
 
@@ -94,8 +115,15 @@ resource "aws_iam_role" "eks_node_role" {
     ]
   })
   tags = {
-    yor_name  = "eks_node_role"
-    yor_trace = "b9910a22-a95c-43ee-a7a5-3a19da0f63ab"
+    yor_name             = "eks_node_role"
+    yor_trace            = "b9910a22-a95c-43ee-a7a5-3a19da0f63ab"
+    git_commit           = "55aee087edbfd7596f59b6e79bb6612a0259965f"
+    git_file             = "eks.tf"
+    git_last_modified_at = "2025-01-21 13:53:06"
+    git_last_modified_by = "matt+github@metahertz.co.uk"
+    git_modifiers        = "matt+github"
+    git_org              = "metahertz"
+    git_repo             = "demo-infra-code"
   }
 }
 
