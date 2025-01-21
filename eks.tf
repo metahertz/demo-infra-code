@@ -19,6 +19,10 @@ resource "aws_iam_role" "eks_cluster_role" {
       }
     ]
   })
+  tags = {
+    yor_name  = "eks_cluster_role"
+    yor_trace = "9df0f6a7-0485-4166-9d3b-27df376f6d53"
+  }
 }
 
 # Attach the AmazonEKSClusterPolicy to the IAM role
@@ -39,6 +43,8 @@ resource "aws_eks_cluster" "eks_cluster" {
   tags = {
     Environment = "dev"
     Project     = "eks-demo"
+    yor_name    = "eks_cluster"
+    yor_trace   = "d4b0f560-0692-41df-b947-24e929bf24ba"
   }
 }
 
@@ -64,6 +70,10 @@ resource "aws_eks_node_group" "eks_node_group" {
   depends_on = [
     aws_iam_role_policy_attachment.eks_node_policy
   ]
+  tags = {
+    yor_name  = "eks_node_group"
+    yor_trace = "3d703e8b-089f-46ed-accb-c0dd02d5a94d"
+  }
 }
 
 # IAM Role for the Node Group
@@ -83,6 +93,10 @@ resource "aws_iam_role" "eks_node_role" {
       }
     ]
   })
+  tags = {
+    yor_name  = "eks_node_role"
+    yor_trace = "b9910a22-a95c-43ee-a7a5-3a19da0f63ab"
+  }
 }
 
 # Attach the AmazonEKSWorkerNodePolicy and other policies to the Node IAM Role
