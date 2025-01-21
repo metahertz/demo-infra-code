@@ -32,16 +32,23 @@ resource "aws_instance" "ec2_instance" {
 
 # S3 Buckets
 resource "aws_s3_bucket" "s3_bucket" {
-  count = 2
+  count = 3
 
   bucket = "my-unique-bucket-${count.index + 1}-${random_id.bucket_id[count.index].hex}"
   acl    = "private"
 
   tags = {
-    Name        = "S3 Bucket ${count.index + 1}"
-    Environment = "Development"
-    yor_name    = "s3_bucket"
-    yor_trace   = "c37f6ec7-3f3d-4bf2-9788-5c1651d61154"
+    Name                 = "S3 Bucket ${count.index + 1}"
+    Environment          = "Development"
+    yor_name             = "s3_bucket"
+    yor_trace            = "c37f6ec7-3f3d-4bf2-9788-5c1651d61154"
+    git_commit           = "N/A"
+    git_file             = "terraform-s3-ec2.tf"
+    git_last_modified_at = "2025-01-21 15:45:16"
+    git_last_modified_by = "matt+github@metahertz.co.uk"
+    git_modifiers        = "matt+github"
+    git_org              = "metahertz"
+    git_repo             = "demo-infra-code"
   }
 }
 
