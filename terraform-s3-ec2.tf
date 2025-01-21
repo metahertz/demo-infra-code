@@ -17,7 +17,7 @@ variable "subnet_id" {
 
 # EC2 Instances
 resource "aws_instance" "ec2_instance" {
-  count         = 2
+  count         = 3
   ami           = "ami-0df8c184d5f6ae949"
   instance_type = var.instance_type
   key_name      = var.key_name
