@@ -24,7 +24,9 @@ resource "aws_instance" "ec2_instance" {
   subnet_id     = var.subnet_id
 
   tags = {
-    Name = "EC2-instance-${count.index + 1}"
+    Name      = "EC2-instance-${count.index + 1}"
+    yor_name  = "ec2_instance"
+    yor_trace = "e8b0c0cf-da84-48dc-b457-82cae4429f58"
   }
 }
 
@@ -38,10 +40,12 @@ resource "aws_s3_bucket" "s3_bucket" {
   tags = {
     Name        = "S3 Bucket ${count.index + 1}"
     Environment = "Development"
+    yor_name    = "s3_bucket"
+    yor_trace   = "c37f6ec7-3f3d-4bf2-9788-5c1651d61154"
   }
 }
 
 resource "random_id" "bucket_id" {
-  count        = 2
-  byte_length  = 8
+  count       = 2
+  byte_length = 8
 }
