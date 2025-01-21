@@ -24,9 +24,16 @@ resource "aws_instance" "ec2_instance" {
   subnet_id     = var.subnet_id
 
   tags = {
-    Name      = "EC2-instance-${count.index + 1}"
-    yor_name  = "ec2_instance"
-    yor_trace = "e8b0c0cf-da84-48dc-b457-82cae4429f58"
+    Name                 = "EC2-instance-${count.index + 1}"
+    yor_name             = "ec2_instance"
+    yor_trace            = "e8b0c0cf-da84-48dc-b457-82cae4429f58"
+    git_commit           = "7af51dea01f36ddac53f153a588837e9690d1548"
+    git_file             = "terraform-s3-ec2.tf"
+    git_last_modified_at = "2025-01-21 16:14:20"
+    git_last_modified_by = "matt+github@metahertz.co.uk"
+    git_modifiers        = "matt+github"
+    git_org              = "metahertz"
+    git_repo             = "demo-infra-code"
   }
 }
 
