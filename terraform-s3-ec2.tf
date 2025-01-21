@@ -4,7 +4,7 @@ provider "aws" {
 
 # Variables
 variable "instance_type" {
-  default = "t2.small"
+  default = "t2.medium"
 }
 
 variable "key_name" {
@@ -53,6 +53,6 @@ resource "aws_s3_bucket" "s3_bucket" {
 }
 
 resource "random_id" "bucket_id" {
-  count       = 2
+  count       = 3
   byte_length = 8
 }
